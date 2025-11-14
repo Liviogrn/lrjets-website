@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Book your flight — LR Jets</title>
+
+    <style>
+        body {
+            background-color: deepskyblue;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #111;
+        }
+
+        header {
+            background-color: beige;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: .5rem 0 0 0;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        nav a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        main {
+            padding: 1rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: rgba(255,255,255,0.95);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: .5rem 1rem;
+            align-items: center;
+        }
+
+        label { text-align: right; padding-right: .5rem; }
+
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: .35rem .5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .full-row { grid-column: 1 / -1; }
+
+        .actions { grid-column: 1 / -1; text-align: center; margin-top: .5rem; }
+
+        footer { background-color: beige; text-align: center; font-size: 0.95rem; padding: 1rem; }
+
+        address { font-style: normal; }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="branding">
+            <h1>LR Jets</h1>
+            <p class="tagline">Book your flight</p>
+        </div>
+
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="formulario.html">Book your flight</a></li>
+                <li><a href="frota_hub.html">Fleet & hubs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="booking-heading">
+            <h2 id="booking-heading">Fill out the form to book your flight experience</h2>
+
+            <article>
+                <form autocomplete="on" method="post" action="#" aria-describedby="form-help">
+                    <label for="first_name">First name</label>
+                    <input type="text" name="first_name" id="first_name" maxlength="25" placeholder="First name" required>
+
+                    <label for="last_name">Last name</label>
+                    <input type="text" name="last_name" id="last_name" maxlength="50" placeholder="Last name" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" maxlength="254" placeholder="you@example.com" required>
+
+                    <label for="phone">Phone number</label>
+                    <input type="tel" name="phone" id="phone" maxlength="15" placeholder="+1-555-555-5555">
+
+                    <label for="dep">Departure airport</label>
+                    <input type="text" name="departure_airport" id="dep" maxlength="3" placeholder="IATA code (e.g. ATL)" pattern="[A-Za-z]{3}" title="Three-letter IATA code">
+
+                    <label for="arr">Arrival airport</label>
+                    <input type="text" name="arrival_airport" id="arr" maxlength="3" placeholder="IATA code (e.g. LHR)" pattern="[A-Za-z]{3}" title="Three-letter IATA code">
+
+                    <label for="aircraft">Preferred aircraft</label>
+                    <select name="aircraft" id="aircraft">
+                        <option value="G650">Gulfstream G650</option>
+                        <option value="p600">Embraer Praetor 600</option>
+                        <option value="cx">Citation X</option>
+                        <option value="phenom">Embraer Phenom 300</option>
+                    </select>
+
+                    <label for="requests">Special requests or notes</label>
+                    <textarea name="requests" id="requests" maxlength="500" placeholder="Any special requests or notes? Let us know" rows="4"></textarea>
+
+                    <div class="actions">
+                        <input type="submit" value="Request quote">
+                    </div>
+                </form>
+
+                <p id="form-help" class="full-row">We will contact you to confirm availability and pricing. Do not include payment information in this form.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us: (XXX) 123-4258 • LRjetsinfo@jets.com</p>
+        <address>
+            3977 Aviation Cir NW, Atlanta, GA 30336, United States<br>
+            Washington Luís avenue, Campo Belo, São Paulo, Brazil<br>
+            Hartmann Rd, London E16 2PX, United Kingdom
+        </address>
+    </footer>
+
+</body>
+</html>
